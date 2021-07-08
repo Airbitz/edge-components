@@ -2,13 +2,13 @@
 
 import React, { Component } from 'react'
 import type { Node } from 'react-native'
-import { Text as RNText, StyleSheet, TouchableHighlight, View } from 'react-native'
+import { Text as RNText, TouchableHighlight, View } from 'react-native'
 
 import { rawStyles, styles } from './style.js'
 
 export type TextProps = {
   children: Node,
-  style?: StyleSheet.Styles
+  style?: Object
 }
 class Text extends Component<TextProps> {
   render () {
@@ -28,7 +28,7 @@ class Text extends Component<TextProps> {
 
 export type Props = {
   children: Node,
-  style?: StyleSheet.Styles,
+  style?: Object,
   onPress: () => void
 }
 export class TertiaryButton extends Component<Props> {

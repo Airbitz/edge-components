@@ -3,7 +3,7 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 
-import THEME from '../../src/edge-theme.js'
+import { THEME } from '../../src/edge-theme.js'
 import { Gradient } from '../../src/Gradient/Gradient.js'
 
 const styles = {

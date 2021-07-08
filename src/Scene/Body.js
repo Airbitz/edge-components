@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import type { Node } from 'react'
 import { Text as RNText, StyleSheet, View } from 'react-native'
 
-import THEME from '../edge-theme.js'
+import { THEME } from '../edge-theme.js'
 
 const debug = {
   // borderColor: 'red', borderWidth: 1
@@ -27,7 +27,7 @@ export const styles = StyleSheet.create(rawStyles)
 export type TextProps = {
   children?: Node,
   // $FlowFixMe
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class Text extends Component<TextProps> {
   render () {
@@ -44,7 +44,7 @@ export class Text extends Component<TextProps> {
 export type BodyProps = {
   children?: Node,
   // $FlowFixMe
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class Body extends Component<BodyProps> {
   static Text = Text

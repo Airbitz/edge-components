@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import type { Node } from 'react'
 import { Text as RNText, StyleSheet, View } from 'react-native'
 
-import THEME from '../../src/edge-theme.js'
+import { THEME } from '../../src/edge-theme.js'
 
 const debugStyle = { borderColor: 'red', borderWidth: 1 }
 
@@ -35,8 +35,7 @@ const styles = StyleSheet.create(rawStyles)
 
 export type TabProps = {
   children?: Node,
-  // $FlowFixMe
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class Tab extends Component<TabProps> {
   render () {
@@ -47,8 +46,7 @@ export class Tab extends Component<TabProps> {
 
 export type TextProps = {
   children?: Node,
-  // $FlowFixMe
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class Text extends Component<TextProps> {
   render () {

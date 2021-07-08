@@ -1,12 +1,12 @@
 // @flow
 
-import * as Colors from '../constants/Colors'
+import { THEME } from '../edge-theme.js'
 import { scale } from '../scaling.js'
 
 const InputStyles = {
   container: {
     position: 'relative',
-    borderBottomColor: Colors.PRIMARY,
+    borderBottomColor: THEME.COLORS.PRIMARY,
     borderBottomWidth: 1,
     width: '100%'
   },

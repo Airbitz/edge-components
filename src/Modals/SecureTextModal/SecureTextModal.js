@@ -2,17 +2,18 @@
 
 import React, { Component } from 'react'
 import type { Node } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { Text, View } from 'react-native'
 
-import { PrimaryButton, SecondaryButton } from '../../Buttons'
-import { FormField } from '../../FormField'
+import { PrimaryButton } from '../../Buttons/PrimaryButton.js'
+import { SecondaryButton } from '../../Buttons/SecondaryButton.js'
+import { FormField } from '../../FormField/FormField.js'
 import { InputAndButtonStyle, MaterialInputStyle } from '../components/styles.js'
 import { styles } from '../ModalStyle.js'
 
 // CONTAINER /////////////////////////////////////////////////////////////////////////////
 export type ContainerProps = {
   children: Node,
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class Container extends Component<ContainerProps> {
   render () {
@@ -28,7 +29,7 @@ export class Container extends Component<ContainerProps> {
 // HEADER /////////////////////////////////////////////////////////////////////////////
 export type HeaderProps = {
   children: Node,
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class Header extends Component<HeaderProps> {
   render () {
@@ -51,7 +52,7 @@ export class Header extends Component<HeaderProps> {
   https://github.com/facebook/react-native/issues/6802
 */
 type AndroidHackSpacerProps = {
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class AndroidHackSpacer extends Component<AndroidHackSpacerProps> {
   render () {
@@ -62,7 +63,7 @@ export class AndroidHackSpacer extends Component<AndroidHackSpacerProps> {
 // ICON /////////////////////////////////////////////////////////////////////////////
 export type IconProps = {
   children: Node,
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class Icon extends Component<IconProps> {
   static AndroidHackSpacer = AndroidHackSpacer
@@ -79,7 +80,7 @@ export class Icon extends Component<IconProps> {
 // TITLE /////////////////////////////////////////////////////////////////////////////
 type TitleProps = {
   children: Node,
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class Title extends Component<TitleProps> {
   render () {
@@ -95,7 +96,7 @@ export class Title extends Component<TitleProps> {
 // DESCRIPTION /////////////////////////////////////////////////////////////////////////////
 export type DescriptionProps = {
   children: Node,
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class Description extends Component<DescriptionProps> {
   render () {
@@ -111,7 +112,7 @@ export class Description extends Component<DescriptionProps> {
 // BODY /////////////////////////////////////////////////////////////////////////////
 type BodyProps = {
   children: Node,
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class Body extends Component<BodyProps> {
   render () {
@@ -127,7 +128,7 @@ export class Body extends Component<BodyProps> {
 // FOOTER /////////////////////////////////////////////////////////////////////////////
 type FooterProps = {
   children: Node,
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class Footer extends Component<FooterProps> {
   render () {
@@ -139,7 +140,7 @@ export class Footer extends Component<FooterProps> {
 // Item /////////////////////////////////////////////////////////////////////////////
 type ItemProps = {
   children: Node,
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class Item extends Component<ItemProps> {
   render () {
@@ -155,7 +156,7 @@ export class Item extends Component<ItemProps> {
 // Row /////////////////////////////////////////////////////////////////////////////
 type RowProps = {
   children: Node,
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class Row extends Component<RowProps> {
   render () {
@@ -171,7 +172,7 @@ export class Row extends Component<RowProps> {
 // INTERACTIVE_MODAL /////////////////////////////////////////////////////////////////////////////
 type SecureTextModalProps = {
   isActive?: boolean,
-  style?: StyleSheet.Styles,
+  style?: Object,
   input: {|
     label: string,
     autoCorrect?: boolean,
@@ -269,7 +270,13 @@ export class SecureTextModal extends Component<SecureTextModalProps, SecureTextM
                   {this.props.noButton.title}
                 </SecondaryButton.Text>
               </SecondaryButton>
-              <PrimaryButton onPress={this.validateInput} style={InputAndButtonStyle.yesButton}>
+              <PrimaryButton
+                onPress={
+                  // $FlowFixMe
+                  this.validateInput
+                }
+                style={InputAndButtonStyle.yesButton}
+              >
                 <PrimaryButton.Text style={InputAndButtonStyle.buttonText}>
                   {this.props.yesButton.title}
                 </PrimaryButton.Text>

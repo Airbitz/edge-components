@@ -19,7 +19,7 @@ export const styles = StyleSheet.create(rawStyles)
 export type ItemProps = {
   children?: Node,
   // $FlowFixMe
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class Item extends Component<ItemProps> {
   render () {

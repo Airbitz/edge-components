@@ -18,7 +18,7 @@ export const styles = StyleSheet.create(rawStyles)
 export type PaddingProps = {
   children?: Node,
   // $FlowFixMe
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class Padding extends Component<PaddingProps> {
   render () {

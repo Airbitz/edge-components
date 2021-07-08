@@ -61,5 +61,3 @@ export const THEME = {
     TRANSPARENT: 'transparent'
   }
 }
-
-export default THEME

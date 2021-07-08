@@ -15,7 +15,7 @@ export const styles = StyleSheet.create(rawStyles)
 export type FooterProps = {
   children?: Node,
   // $FlowFixMe
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class Footer extends Component<FooterProps> {
   static Text = RNText

@@ -2,7 +2,7 @@
 
 import { StyleSheet } from 'react-native'
 
-import THEME from '../../edge-theme.js'
+import { THEME } from '../../edge-theme.js'
 import { scale } from '../../scaling.js'
 
 export const rawStyles = {

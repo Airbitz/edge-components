@@ -21,7 +21,7 @@ export const styles = StyleSheet.create(rawStyles)
 export type RowProps = {
   children?: Node,
   // $FlowFixMe
-  style?: StyleSheet.Styles
+  style?: Object
 }
 export class Row extends Component<RowProps> {
   render () {
